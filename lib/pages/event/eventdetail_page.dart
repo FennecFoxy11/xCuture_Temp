@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:xculturetestapi/pages/event/event_edit.dart';
 
 class EventDetailPage extends StatefulWidget {
   const EventDetailPage({ Key? key }) : super(key: key);
@@ -63,6 +64,15 @@ class _EventDetailPageState extends State<EventDetailPage> {
                     color: Colors.white,
                     onPressed: () {
                       // Navigator.pop(context);
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const EditEventPage(),
+                          // settings: RouteSettings(
+                          //   arguments: snapshot.data,
+                          // ),
+                        )
+                      );
                     },
                   ),
                 ),

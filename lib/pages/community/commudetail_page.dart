@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:xculturetestapi/pages/community/commuedit_page.dart';
 
 class CommuDetailPage extends StatefulWidget {
   const CommuDetailPage({ Key? key }) : super(key: key);
@@ -60,7 +61,17 @@ class _CommuDetailPageState extends State<CommuDetailPage> {
                     visualDensity: VisualDensity.compact,
                     icon: const Icon(Icons.more_vert),
                     color: Colors.white,
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const EditCommuPage(),
+                          // settings: RouteSettings(
+                          //   arguments: snapshot.data,
+                          // ),
+                        )
+                      );
+                    },
                   ),
                 ),
               ),
